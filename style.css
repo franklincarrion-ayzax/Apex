@@ -1,1 +1,25 @@
-1
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0A0B0E;
+}
+::-webkit-scrollbar-thumb {
+    background: #1F2430;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF1E27;
+}
+
+/* Transiciones personalizadas */
+#cart-drawer.active {
+    visibility: visible;
+}
+#cart-drawer.active #cart-backdrop {
+    opacity: 1;
+}
+#cart-drawer.active #cart-panel {
+    transform: translateX(0);
+}
