@@ -1,1 +1,63 @@
-4
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Mi Sitio Web</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        
+        /* Barra de Navegación */
+        header { background-color: #1a1a2e; color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: #00adb5; }
+        nav { display: flex; gap: 15px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: #00adb5; }
+        nav a.active { background-color: #00adb5; }
+
+        /* Contenido y Cuadrícula */
+        .container { padding: 40px 20px; max-width: 1000px; margin: auto; text-align: center; }
+        .grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+        .card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px; width: 260px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card h3 { color: #1a1a2e; margin-top: 0; }
+        .card p { font-size: 0.95rem; color: #666; }
+        .price { font-size: 1.2rem; font-weight: bold; color: #00adb5; display: block; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TechNova</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="productos.html" class="active">Productos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Nuestros Productos</h1>
+        <p>Explora el catálogo de soluciones tecnológicas disponibles.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Laptop Pro 15</h3>
+                <p>Procesador rápido y pantalla de alta resolución para desarrollo y diseño.</p>
+                <span class="price">$1,199.00</span>
+            </div>
+            <div class="card">
+                <h3>Monitor UltraWide</h3>
+                <p>34 pulgadas con excelente precisión de color para multitarea eficiente.</p>
+                <span class="price">$499.00</span>
+            </div>
+            <div class="card">
+                <h3>Teclado Mecánico</h3>
+                <p>Switches silenciosos y retroiluminación para largas sesiones de trabajo.</p>
+                <span class="price">$89.00</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
