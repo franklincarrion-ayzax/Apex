@@ -3,114 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Apex Tech</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        apex: {
-                            red: '#FF1E27',
-                            redDark: '#C4151B',
-                            dark: '#0A0B0E',
-                            card: '#12141A',
-                            border: '#1F2430'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Contactos | Apex Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-apex-dark text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-apex-red selection:text-white">
-
-    <!-- Header -->
-    <header class="sticky top-0 z-40 bg-apex-dark/95 backdrop-blur-md border-b border-apex-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-apex-red to-red-500 flex items-center justify-center font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">A</div>
-                <span class="font-extrabold text-2xl tracking-wider text-white">APEX<span class="text-apex-red">TECH</span></span>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
-                <a href="index.html" class="text-slate-300 hover:text-apex-red transition">Inicio</a>
-                <a href="productos.html" class="text-slate-300 hover:text-apex-red transition">Productos</a>
-                <a href="contacto.html" class="text-apex-red hover:text-apex-red transition">Contacto</a>
-            </nav>
-
-            <div class="flex items-center gap-4">
-                <button id="open-cart-btn" class="relative p-2.5 rounded-xl bg-apex-card border border-apex-border text-slate-200 hover:text-white hover:border-apex-red/50 transition">
-                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
-                    <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-apex-red text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
-                </button>
-            </div>
+<body>
+    <header>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><i data-lucide="cpu" style="color:var(--accent-red)"></i> APEX <span>TECH</span></a>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Inicio</a></li>
+                <li><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                <li><a class="nav-link" href="productos.html">Productos</a></li>
+                <li><a class="nav-link active" href="contactos.html">Contactos</a></li>
+            </ul>
+            <button class="cart-btn" id="cart-btn" aria-label="Carrito">
+                <i data-lucide="shopping-cart"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </button>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="text-center mb-12">
-            <h1 class="text-3xl sm:text-5xl font-extrabold text-white">Ponte en Contacto</h1>
-            <p class="text-slate-400 mt-3">¿Tienes dudas con tu pedido o necesitas asesoramiento técnico? Escríbenos.</p>
+    <main>
+        <div class="section-header">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes dudas o necesitas un equipo personalizado? Escríbenos.</p>
         </div>
 
-        <form id="contact-form" class="bg-apex-card border border-apex-border p-8 rounded-2xl shadow-xl space-y-6">
-            <div>
-                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Nombre completo</label>
-                <input type="text" id="name" required class="w-full bg-apex-dark border border-apex-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-apex-red transition" placeholder="Tu nombre">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Atención Directa</h3>
+                <div class="contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <div><strong>Ubicación:</strong><p>Universidad de Cuenca, Cuenca, Ecuador</p></div>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="mail"></i>
+                    <div><strong>Correo Electrónico:</strong><p>ventas@apextech.com</p></div>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="phone"></i>
+                    <div><strong>Teléfono / WhatsApp:</strong><p>+593 99 999 9999</p></div>
+                </div>
+                <div>
+                    <strong>Síguenos:</strong>
+                    <div class="socials" style="margin-top:.6rem">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i data-lucide="instagram" size="16"></i> Instagram</a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i data-lucide="facebook" size="16"></i> Facebook</a>
+                        <a href="https://x.com/" target="_blank" rel="noopener"><i data-lucide="twitter" size="16"></i> X</a>
+                        <a href="https://github.com/" target="_blank" rel="noopener"><i data-lucide="github" size="16"></i> GitHub</a>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Correo Electrónico</label>
-                <input type="email" id="email" required class="w-full bg-apex-dark border border-apex-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-apex-red transition" placeholder="tu@email.com">
-            </div>
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-control" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje / Consulta</label>
+                    <textarea id="message" class="form-control" placeholder="¿En qué te podemos ayudar?" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Enviar Mensaje <i data-lucide="send"></i></button>
+            </form>
+        </div>
 
-            <div>
-                <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Mensaje</label>
-                <textarea id="message" rows="5" required class="w-full bg-apex-dark border border-apex-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-apex-red transition" placeholder="Escribe tu mensaje aquí..."></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-4 bg-apex-red hover:bg-apex-redDark text-white font-bold rounded-xl shadow-lg transition">
-                Enviar Mensaje
-            </button>
-        </form>
+        <div class="map-box">
+            <h3 class="subtitle">¿Dónde estamos?</h3>
+            <iframe title="Mapa de ubicación" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Universidad+de+Cuenca,+Cuenca,+Ecuador&output=embed"></iframe>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-apex-card border-t border-apex-border py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center text-slate-400 text-sm">
-            <p>&copy; 2026 APEX TECH. Todos los derechos reservados.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 <span>Apex Tech</span>. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Cart Drawer -->
-    <div id="cart-drawer" class="fixed inset-0 z-50 invisible transition-all duration-300">
-        <div id="cart-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 transition-opacity"></div>
-        <div id="cart-panel" class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-apex-card border-l border-apex-border shadow-2xl flex flex-col translate-x-full transition-transform">
-            <div class="p-6 border-b border-apex-border flex items-center justify-between">
-                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i data-lucide="shopping-cart" class="w-5 h-5 text-apex-red"></i> Mi Carrito
-                </h3>
-                <button id="close-cart-btn" class="text-slate-400 hover:text-white p-1 rounded-lg">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div id="cart-items" class="flex-grow p-6 overflow-y-auto space-y-4"></div>
-            <div class="p-6 border-t border-apex-border bg-apex-dark/50">
-                <div class="flex justify-between items-center mb-6">
-                    <span class="text-slate-400 font-medium">Total:</span>
-                    <span id="cart-total" class="text-2xl font-black text-apex-red">$0.00</span>
-                </div>
-                <button id="checkout-btn" class="w-full py-4 bg-apex-red hover:bg-apex-redDark text-white font-bold rounded-xl shadow-lg transition">
-                    Finalizar Compra
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
